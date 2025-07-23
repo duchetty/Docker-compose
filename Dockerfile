@@ -1,5 +1,5 @@
 FROM openjdk:17-jdk-slim
-COPY /target/spring-boot-docker-compose.jar /user/app
+COPY /target/spring-boot-docker-compose.jar app.jar
 WORKDIR /user/app
 EXPOSE 8080
-ENTRYPOINT [ "java", "-jar", "/spring-boot-docker-compose.jar" ]
+ENTRYPOINT [ "java", "-jar", "app.jar" ]
