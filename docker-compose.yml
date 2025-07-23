@@ -1,6 +1,7 @@
 version: "3"
 services:
   application:
+    build: .
     image: spring-boot-docker-compose
     ports:
       - "8080:8080"
@@ -21,5 +22,6 @@ services:
       - MYSQL_DATABASE=sbms
     volumes:
       - /data/mysql
+
 networks:
   springboot-db-net:
